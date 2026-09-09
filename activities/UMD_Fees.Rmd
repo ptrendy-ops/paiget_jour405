@@ -33,7 +33,7 @@ umd_fees_pct <- umd_fees |> mutate(pct_change = (`Fall 2026`- `Fall 2021`)/`Fall
 
 Write a few sentences about what you found in those percentages. What's the story here? What questions do you have?
 
-
+I found that some fees increased slightly or not at all, like the athletic fees. I wonder if the recent implementation of the $30 Student Sustainability Fee, which has increased by 150% since 2021, has helped to fund sustainability projects. According to a UMD webpage, the fee go towards the Sustainability Fund that provides grants to environmental-related projects. My question: How much of the student fees collected for the Sustainability Fund have gone toward projects? What are some of the more prominent projects and how do they affect students?
 
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
