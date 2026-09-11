@@ -33,7 +33,7 @@ Add up the total number of incidents per month for each category using `mutate()
 ```{r}
 total_incidents <- pg_crime |> mutate(total_incidents=(Jan+Feb+Mar+Apr+May+Jun+Jul+Aug+Sep+Oct+Nov+Dec))
 
-pg_crime_averages <- total_incidents |> mutate(pg_crime_averages=(total_incidents/12)
+pg_crime_averages <- total_incidents |> mutate(pg_crime_averages=(total_incidents/12))
 
 ```
 
@@ -41,7 +41,7 @@ pg_crime_averages <- total_incidents |> mutate(pg_crime_averages=(total_incident
 
 Examine the new dataframe, `pg_crime_averages`, by clicking on it in the Environment tab in RStudio. Write a couple of sentences describing the average number of incidents per month for each category. Which categories have the highest average number of incidents per month? Which have the lowest? What does this tell you about the pattern of crime in Prince George's County? Are there categories that you have questions about? Why or why not?
 
-ANSWER HERE
+Accident, auto stolen, and theft from auto are the three categories with the highest monthly average of incidents. Homicide, breaking and entering other, and sex offense are the three categories with the lowest average monthly average of incidents. There are many auto related incidents in PG County and not as many violent crimes. I am wondering why Robbery Residential has an NA value for March and October. I am assuming it is because there were zero reported incidents, but I am not sure. 
 
 
 ### Task 6: Testing a Theory
@@ -49,19 +49,24 @@ ANSWER HERE
 One theory about crime is that it is more likely to occur in the summer months. Test this theory by creating three new columns using `mutate()` that calculate the percentage change compared to the average for each category of crime for the months of June, July, and August. Call the new columns `june_change`, `july_change`, and `august_change`. Assign the result to a new dataframe called `summer_crime_averages`.
 
 ```{r}
+summer_crime_averages <- pg_crime_averages |> mutate(june_change = (`Jun`- `pg_crime_averages`)/`pg_crime_averages` * 100)
+summer_crime_averages <- summer_crime_averages |> mutate(july_change = (`Jul`- `pg_crime_averages`)/`pg_crime_averages` * 100)
+summer_crime_averages <- summer_crime_averages |> mutate(august_change = (`Aug`- `pg_crime_averages`)/`pg_crime_averages` * 100)
 ```
 
 ### Task 7: Describe the Summer Crime Averages
 
 Look at the `summer_crime_averages` dataframe by clicking on it in the Environment tab in RStudio. Write a couple of sentences describing the percentage change in the average number of incidents per month for each category of crime for the months of June, July, and August. Do you see any patterns? What does this tell you about the theory that crime is more likely to occur in the summer months?
 
-ANSWER HERE
+Over the summer months, there are almost equal occurrences of a percentage increase and decrease in the average number of incidents per month of each crime category. Overall, the percentage increases are greater, which indicates a higher crime rate in the summer. Both Theft and Breaking and Entering Other had percentage decreases in each summer month. Auto Stolen, Homicide, and Theft From Auto had percentage increases in each summer month. 
 
 ### Task 8: What's the Story?
 
 Write up a lede and nutgraf of a story focused on the crime data in Prince George's County. It could be from any of the dataframes you've created in this assignment. The lede should be a single sentence that summarizes the most important information in the data. The nutgraf should be a paragraph that provides more context and explains why the data is important.
 
-ANSWER HERE
+Auto thefts were up the summer of 2024 in Prince George's County, as all three summer months experienced higher rates than the monthly average. 
+
+There were 4790 total reports of stolen vehicles in 2024, according to data provided by the Prince George's County Police Department. The monthly average number of incidents was 399. June expereinced a 10% increase, and July and August both had a 5% increase. 
 
 ### Task 9: Save Your Work and Put it on GitHub
 
