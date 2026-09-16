@@ -39,7 +39,7 @@ team_aces |> mutate(percentile = ntile(total_aces, 100))
 
 Write a couple of sentences that puts Maryland into context with the other teams in the dataset. You can do some Internet research to help with this.
 
-
+Maryland's 223 aces in the season put them  at the 95th percentile/top 5% teams. Maryland was in a good position compared to other teams in the category of aces, but unfortunately not for the season. According to the Diamondback, they lost over half of their games with a 0.452 record. To compare, the University of Dayton, which was at 93% had a 0.912 record, according to their athletics website. 
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
 
