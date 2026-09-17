@@ -49,13 +49,15 @@ md_cities_change <- md_cities_rates |> mutate (violent_change=(violent_rate_2020
 
 Look at the `md_cities_change` dataframe by clicking on it in the Environment tab in RStudio. Write a couple of sentences describing the percentage change results. What's more interesting here, the patterns or the outliers? What's the story in the data?
 
-ANSWER HERE
+Accident had one of each in 2019 and then two of each in 2020. Of the cities that had a percentage change result, most of them decreased in violent and property crimes. What I found more interesting is that some cities had a dramatic increase in violent and property crime rates from 2019-2020. The top three increases in violent crime rates were Edmonston (895%), Poolesville (607%) and Pocomoke City (301%). The top three increases in property crime rates were Crisfield (321%), Cecilton (200%) and Garett Park (188%). I find these outliers much interesting, especially the fact that they are all smaller towns  
 
 ### Task 8: Tell the Best Story
 
 Write up a lede and nutgraf of a story with the _best_ story idea you've found in this assignment. The lede should be a single sentence that summarizes the most important information in the data. The nutgraf should be a paragraph that provides more context and explains why the data is important.
 
-ANSWER HERE
+Violent crime rates decreased for many cities in Maryland from 2019 to 2020, but some of the highest increases occurred in smaller towns in the state. 
+
+Edmonston experienced the highest violent crime rate increase of 895%, and Poolesville came in second with a 607% increase. Of the ten cities with the highest increase in violent crime rates, eight had a population in 2020 of under 5,000 people and classify as a small town. The two cities that had a population higher than 5,000 were Poolesville with 5191 residents and Glenarden with 6177 residents. Meanwhile, Baltimore and Frederick, the two most populous cities, experienced a decrease in violent rates of 13% and 95%, respectively. 
 
 ### Task 9: Save Your Work and Put it on GitHub
 
