@@ -62,3 +62,26 @@ Edmonston experienced the highest violent crime rate increase of 895%, and Poole
 ### Task 9: Save Your Work and Put it on GitHub
 
 Save this notebook, then commit it to your local repository. Push the changes to your GitHub repository and submit the URL for this file in ELMS.
+
+### Task 10:
+
+Using the 2020 violent crime rate, calculate the percentiles using `ntile()`. Save the results to a new dataframe called `md_cities_percentiles`. 
+
+```{r}
+install.packages("dplyr")
+md_cities_percentiles <- md_cities_change |> mutate(percentile = ntile(violent_rate_2020, 100))
+```
+How many cities are above the 90th percentile?
+
+10 cities are above the 90th percentile. 
+
+#Calculate the Interquartile Range of the 2020 violent crime rate using `summarize()` and R's `IQR()` function
+
+```{r}
+#md_cities_percentiles <- md_cities_percentiles summarize(iqr=IQR(violent_rate_2020))
+md_cities_percentiles |> summarize(iqr=IQR(violent_rate_2020))
+```
+
+Do the results change your best story idea from the previous assignment?
+
+Yes, this does change my best story idea. Even though Baltimore city experienced a negative change in violent crime rates, it was still at the 99th percentile for violent crime. Additionally, only three cities in the top 10 percentiles had a population less than 1,000. Even though many of the dramatic increases in violent crime rates were in small towns, their percentage compared to other cities was still less. I think I would shift my story to focus on how Ocean City was at the 100th percentile and had an increase in violent and property crimes during 2020 when many had a decrease. If I had to speculate a reason, I would say crime rates increased because people could still visit the Ocean City beaches during Covid-19. This would have to be backed up with statistics about how many people visited and maybe data on if vacationers or Ocean City natives committed the crimes. 
