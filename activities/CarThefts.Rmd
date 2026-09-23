@@ -44,10 +44,11 @@ car_thefts |>
 ### Task 5: Add a line to the histogram that shows the mean of the number of car thefts, and two other lines to show one standard deviation in both directions
 
 
+
 ### Task 6: Describe your results
 
 Is the distribution normal or skewed in one direction? Write a sentence in which you describe the range of the data covered by one standard deviation from the mean on both sides - how much of the data falls in that range?
 
-
+The distribution is normal for the most part. It is somewhat skewed to the left, but is generally increasing/decreasing continuously (the data doesn't dip and then increase). More car thefts fall within +2 standard deviation points of the mean, than fall within -2 standard deviation points of the mean. From a quick glance around 2/3 of the data falls within these +/-2 ranges. Additionally, this data is somewhat normal for data related to car thefts. There might be fewer car thefts on a certain day in January when conditions are snowy, icy, or rainy and therefore unsafe to drive. 
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
