@@ -1,6 +1,6 @@
 ---
 title: "Baltimore County 911 Overdose Calls Analysis"
-author: "YOUR NAME HERE"
+author: "Paige Trendell"
 ---
 
 ```{r setup, include=FALSE}
@@ -74,6 +74,8 @@ summary(daily_calls$call_count)
 
 Let's visualize the time series of daily calls. What patterns do you see? If you had to draw horizontal lines that would highlight unusual days, where would those lines be?
 
+From my first observation, the majority of days have 7-15 calls. I see that the 20 days with the highest calls (besides January 1) occur during spring, summer, and fall months when the weather is nicer. A horizontal line to highlight unusual days would be located on days with 19 to 23 calls or less than 4 calls. 
+
 ANSWER HERE
 
 ```{r daily-calls-plot}
@@ -137,7 +139,9 @@ unusual_days |>
 
 Let's visualize these unusual days in the context of the full dataset. How do they differ from your answer on Task 3?
 
-ANSWER HERE
+These unusual days differ from my answer on Task 3 because they include more days than I accounted for. I basically eyeballed my answer for Task 3 by looking at which number of calls that occurred on the fewest days. For example, I assumed 16 was usual because there were so many days with 16 calls, but 19 was not because there were 19 calls on only one day. 
+
+
 
 ```{r plot-unusual-days}
 # Create a clean factor for the plot legend
@@ -207,7 +211,7 @@ ggplot(dow_summary, aes(x = day_of_week, y = avg_calls)) +
 
 We can also calculate z-scores that account for the day of the week pattern. How would you describe the day with the highest z-score without using the term "z-score"?
 
-ANSWER HERE
+Tuesday, Oct. 4, 2022 had the highest number of drug overdose calls in Baltimore County from February 2022 to February 2023. This day was around 13 calls higher than the average of 10.35 calls on Tuesdays for the year. 
 
 ```{r day-of-week-z-scores}
 # Calculate day-of-week adjusted z-scores
