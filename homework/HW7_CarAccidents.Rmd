@@ -32,7 +32,7 @@ library(lubridate)  # For working with dates
 Load the accident data from our CSV file at https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/daily_accidents.csv into a dataframe called `accidents`:
 
 ```{r load-data}
-
+accidents <- read_csv("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/daily_accidents.csv")
 ```
 
 ## Data Exploration
@@ -68,7 +68,7 @@ ggplot(accidents, aes(x = date, y = total)) +
 ### Task 2 (3 points)
 Looking at the time series visualization above, identify at least two noticeable patterns or anomalies. What questions would you want to investigate further based on this initial view of the data? How might these visual patterns translate into potential story angles?
 
-ANSWER HERE
+I notice that there is a significant dip in accidents at the beginning of 2020. I also noticed the highest and lowest count occur right at the end of 2022, very close to each other. 
 
 The daily data is quite noisy, so let's also look at weekly patterns:
 
@@ -107,7 +107,7 @@ ggplot(accidents, aes(x = day_of_week, y = total)) +
 ### Task 3 (2 points)
 Based on the day-of-week analysis, which day(s) have the highest and lowest average accidents? Why might these patterns exist?
 
-ANSWER HERE
+Friday and Saturday have the highest average accidents, and Monday through Thursday have the lowest average accidents. These patterns might exist because people travel more on the weekends
 
 ## Calculating Z-Scores
 
