@@ -68,7 +68,7 @@ ggplot(accidents, aes(x = date, y = total)) +
 ### Task 2 (3 points)
 Looking at the time series visualization above, identify at least two noticeable patterns or anomalies. What questions would you want to investigate further based on this initial view of the data? How might these visual patterns translate into potential story angles?
 
-I notice that there is a significant dip in accidents at the beginning of 2020. I also noticed the highest and lowest count occur right at the end of 2022, very close to each other. 
+I notice that there is a significant dip in accidents at the beginning of 2020. I also noticed the highest and lowest count occur right at the end of 2021, very close to each other. 
 
 The daily data is quite noisy, so let's also look at weekly patterns:
 
@@ -107,7 +107,7 @@ ggplot(accidents, aes(x = day_of_week, y = total)) +
 ### Task 3 (2 points)
 Based on the day-of-week analysis, which day(s) have the highest and lowest average accidents? Why might these patterns exist?
 
-Friday and Saturday have the highest average accidents, and Monday through Thursday have the lowest average accidents. These patterns might exist because people travel more on the weekends
+Friday and Saturday have the highest average accidents, and Monday through Thursday have the lowest average accidents. These patterns might exist because people travel more on the weekends. Also, during the week people typically commute to work. There might be fewer accidents because they are familiar with these roads. 
 
 ## Calculating Z-Scores
 
@@ -119,9 +119,9 @@ Now, using the accidents dataframe, add three columns using `mutate()`: mean_acc
 # Calculate z-scores for total accidents
 accidents <- accidents |>
   mutate(
-    mean_accidents = REPLACE_ME,
-    sd_accidents = REPLACE_ME,
-    z_score = (REPLACE_ME - REPLACE_ME) / REPLACE_ME
+    mean_accidents = mean(total),
+    sd_accidents = sd(total),
+    z_score = (total - mean(total)) / sd(total)
   )
 
 # Display the data with z-scores
@@ -156,7 +156,7 @@ unusual_days |>
 ### Task 5 (3 points)
 Choose one of the top 10 unusual days and research what might have happened on that date. Look for weather events, holidays, major incidents, or other factors that could explain the unusual number of accidents. Briefly describe your findings and how you would incorporate this context into a story.
 
-ANSWER HERE
+October 29, 2021 was a very rainy day, and part of "Halloweekend," where many people travel to costume parties, bars, etc. More people were probably driving, along with usual Friday traffic. Additionally, people are more likely to drink on Halloween which could cause more accidents. I would pull weather data and  DUI data to incorporate this into a story.  
 
 Let's visualize these unusual days:
 
@@ -186,9 +186,9 @@ Let's calculate z-scores that account for day of week patterns based on the same
 accidents <- accidents |>
   group_by(day_of_week) |>
   mutate(
-    dow_mean = REPLACE_ME,
-    dow_sd = REPLACE_ME,
-    dow_z_score = (REPLACE_ME - REPLACE_ME) / REPLACE_ME
+    dow_mean = mean(total),
+    dow_sd = sd(total),
+    dow_z_score = ((total) - mean(total)) / sd(total)
   ) |>
   ungroup()
 
@@ -207,7 +207,8 @@ unusual_dow |>
 ### Task 7 (3 points)
 Compare the days that have extreme z-scores overall versus those with extreme day-of-week z-scores. How do these lists differ? What journalistic insights can you draw from comparing these two different approaches to measuring "unusual" days?
 
-ANSWER HERE
+The list of overall extreme z-scores and extreme day-of-week z-scores both have 10/29/21 as the day with the largest z-score. When measuring day-of-week, it does lower slightly from 4.77 to 4.17. The next 2 highest overall days are included in the day-of-week  list, but in different order. 3/23/25, The day with the lowest absolute value z-score in the overall list, is also in the day-of-week list. Besides this four days, the lists have different days. Additionally, the day-of-week list has z-scores with lower absolute values in gneral. I think measuring unusual days factoring in day-of-week trends is a bette approach because it can more accurately label outliers. Certain days have higher averages of accident and taking that into account can create more accurate results.    
+ 
 
 Let's see how many unusual days we have for each day of the week:
 
@@ -286,7 +287,7 @@ unusual_monthly |>
 ### Task 8 (2 points)
 Based on the monthly pattern analysis, which months have the highest and lowest average accidents? Develop a hypothesis about why these seasonal patterns exist.
 
-ANSWER HERE
+May, October, and December have the highest number of average accidents. January, February, and March have the lowest number of average accidents. The number of accidents are generally higher in months with nice weather - May through October. These seasonal patterns exist because people are more likely to leave the house when the weather is nice. Additionally, there are more teen drivers on the road when schools get out in late spring. The spike in December can be explained by holiday traveling. 
 
 ## Identifying Extreme Outliers
 
@@ -311,9 +312,20 @@ if(nrow(extreme_outliers) > 0) {
 ### Task 9 (2 points)
 For the extreme outliers identified (z-scores beyond ±3), what do they have in common?
 
-ANSWER HERE
+All of the extreme outliers are all during or near the weekend, Monday - Friday, and many of them occur over holiday weekends. 
 
 ## Your Best Story Pitch
 
 ### Task 10 (5 points)
 Based on all the analyses performed, craft your best story pitch, including a headline and lede. Be sure to include what kinds of sources/people you'd talk to for the story.
+
+Headline and lede:
+
+Holidays are the Most Dangerous Time to Drive in Prince George's County
+
+The days with a number of accidents significantly higher than the daily average of 25 accidents most often occur on holiday weekends, according to Prince George's county accident data.  
+
+*I would then go on to give examples of days with signficantly high z-scores. 
+I would talk to the police department, EMS about their experiences on holiday weekends. Do they do certain things to prepare for holiday weekends based off of this data/their experiences. I think I would also try to get data from toll roads to estimate the influx of drivers on the roads. 
+
+
