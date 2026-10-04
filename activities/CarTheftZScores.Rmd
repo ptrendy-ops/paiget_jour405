@@ -298,3 +298,5 @@ The `pnorm()` estimate and the actual proportion won't match perfectly — `pnor
 #My note from class:
 
 I found it interesting that cars are stolen the most often in winter because they are kept running. I will definitely be more careful about leaving my car running now!
+
+https://gist.githubusercontent.com/dwillis/25102889f576b1707576b85e0be0c353/raw/1ca2be9636497cb5293ff7b1f4e6ed8e27a9e049/car_theft_pnorm.rmd
