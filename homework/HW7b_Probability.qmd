@@ -24,7 +24,7 @@ wh_paid <- wh_salaries |>
   summarize (
   mean_salary = mean(SALARY),
   median_salary = median(SALARY),
-  sd_salary = sd(SALARY)
+  sd_salary = sd(SALARY),
   )
 
 
@@ -37,7 +37,7 @@ Now create a histogram of the paid salaries with a vertical line for the mean an
 wh_salaries |>
   ggplot()+
   geom_histogram(aes(x = SALARY), binwidth=10000)+
-  geom_vline(aes(xintercept = mean(SALARY)), color = "red", linetype = "dashed", linewidth = 1)
+  geom_vline(aes(xintercept = mean(SALARY)), color = "red", linetype = "dashed", linewidth = 1)+
   geom_vline(aes(xintercept = mean(SALARY) - sd(SALARY)), color = "blue", linetype = "dashed", linewidth = 1) +
   geom_vline(aes(xintercept = mean(SALARY) + sd(SALARY)), color = "blue", linetype = "dashed", linewidth = 1)
 ```
@@ -78,7 +78,7 @@ empirical
 
 **How closely does the data follow the empirical rule? What does any deviation tell you about the distribution?**
 
-ANSWER HERE
+The data does not folow the empirical rule at all. This deviations tells me that the distribution is very uneven. 
 
 ### Task 4: From z-scores to probability with pnorm() (4 points)
 
