@@ -9,6 +9,9 @@ In this assignment, you'll build on your z-score skills to answer probability qu
 Load the tidyverse and the White House salaries data from https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/white_house_salaries_2025.csv into a dataframe called `wh_salaries`
 
 ```{r}
+library(tidyverse)
+
+wh_salaries <- read_csv ("https://raw.githubusercontent.com/dwillis/jour405/refs/heads/main/data/white_house_salaries_2025.csv")
 ```
 
 ### Task 2: Filter and summarize (2 points)
@@ -17,7 +20,12 @@ You may remember from HW3 that some White House staffers have a salary of $0. Le
 
 ```{r}
 wh_paid <- wh_salaries |>
-  filter(SALARY > 0)
+  filter(SALARY > 0) |>
+  summarize (
+  mean_salary = mean(SALARY),
+  median_salary = median(SALARY),
+  sd_salary = sd(SALARY)
+  )
 
 
 
@@ -26,11 +34,17 @@ wh_paid <- wh_salaries |>
 Now create a histogram of the paid salaries with a vertical line for the mean and two more for ±1 standard deviation, similar to what you did in HW6 with Spotify data.
 
 ```{r}
+wh_salaries |>
+  ggplot()+
+  geom_histogram(aes(x = SALARY), binwidth=10000)+
+  geom_vline(aes(xintercept = mean(SALARY)), color = "red", linetype = "dashed", linewidth = 1)
+  geom_vline(aes(xintercept = mean(SALARY) - sd(SALARY)), color = "blue", linetype = "dashed", linewidth = 1) +
+  geom_vline(aes(xintercept = mean(SALARY) + sd(SALARY)), color = "blue", linetype = "dashed", linewidth = 1)
 ```
 
 **Describe the shape of the distribution. Is it roughly normal? Skewed? Where do most salaries cluster?**
 
-ANSWER HERE
+The distribution is not normal. There are lots of spikes and dips. Most of the salaries cluster around the 70k mark. 
 
 ### Task 3: The Empirical Rule (3 points)
 
