@@ -60,5 +60,7 @@ The means of each set are very similar. They are less than one M&M apart. The st
 
 Write a few sentences about what you found in the data. What does this tell you about the M&Ms dataset and about the act of random sampling?
 
+I found that the data had a decent amount of variance. For example, the smallest amount of red M&Ms a group had was 45 and the largest was 117. Some groups did not even have a total of 117. The variance in the data helps to explain why the standard deviation is different in the population and sample. Since the population has 100 rows, compared to the five in the sample, the data is more likely to "even out" and distribute normally. This tells me that random sampling is not as accurate, especially when the sample size is small compared to the population. When taking five out of the 100 rows, there is a higher chance of five rows being not representative than 10 or 20 rows.  
+
 
 When finished, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
