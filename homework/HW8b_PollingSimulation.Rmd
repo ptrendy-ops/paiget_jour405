@@ -112,18 +112,18 @@ ggplot(simulations_all, aes(x = proportion)) +
 
 **Describe the shape of the n=50 histogram.** Is it as symmetric as the unaffiliated histogram from class? Why do you think that is, given that White Evangelicals make up only about 10% of the population?
 
-ANSWER HERE
+The n=50 histogram is simiarly symmetrical tothee unaffiliated histogram from class. Even though White Evangelicals make up about 10% of the population, the number of times they were sampled was the same as the unaffiliated sample from class, so a symmetrical histogram is the expected result. 
 
 **Compare the n=50 and n=500 histograms for this group.** How much does the distribution change with a larger sample? Is the improvement bigger or smaller than what you saw in class with the unaffiliated group?
 
-ANSWER HERE
+The distribution becomes much tighter with a larger sample. The data in the n=500 histogram is clustered closer to the mean. Additionally, there are more counts of the sample proportion being equal to the mean in the n=500 histogram than the n=50 histogram. The improvement is smaller than what I saw in class with the unaffiliated group. The evangelical n=50 histogram has around 175 counts of being correct and the n=500 has around 275 counts of being correct. Meanwhile, the unaffiliated n=50 histgram had around 125 counts of being correct and the n=500 had just over 300 counts of being correct.  
 
 **A news organization wants to report on White Evangelical voters using a poll of 200 people.** Based on your simulations, roughly how many White Evangelical respondents would that poll be likely to include? What does that suggest about the reliability of estimates for smaller subgroups?
 
-ANSWER HERE
+The poll would include roughly 20 White Evangelical respondents. This suggests that estimates for smaller subgroups might not always be accurate. 20 respondents is often not enough people to perform these types of calculations and estimates on.  
 
 **Imagine you are covering the 2028 presidential election and a campaign shares a poll showing White Evangelical support at 78%.** The poll sampled 400 people. Based on everything you've seen in this assignment and in class, what would you want to know before reporting that number?
 
-ANSWER HERE
+Before reporting this number, I would want to know how they got the population sample. If everyone in the population had an equal chance of being in the poll, or if only certain individuals were selected. Political views of evangelical groups in different regions definitely vary. I would also want to know of those 400 people, how many were White Evangelicals. If the number is not close to 10 percent, that would raise some suspicions.  
 
 When finished, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
