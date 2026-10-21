@@ -58,4 +58,5 @@ weekly_wmata |>
 
 **Answer this question:** Describe the trend you see. Is ridership going up, down, or staying flat? What are the big dips, and what might explain them? What would you want to know before writing a story about Metro weekly ridership trends?
 
-ANSWER HERE
+Ridership is increasing. Big dips mainly occur in winter months. This could be explained by snow storms and bad weather. 
+Before writing a story about weekly ridership trends, I would want to know of any dates when certain lines/stops were closed or opened. I would also want to know about the population growth in DC and the DMV area. 
