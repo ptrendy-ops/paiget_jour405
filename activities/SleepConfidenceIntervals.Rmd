@@ -41,7 +41,7 @@ sleep_stats
 
 **Answer this question:** Based on these numbers alone, what would you tell the health reporter? Why might it be risky to report the average as the definitive answer for all students?
 
-ANSWER HERE
+I would tell the health reporter that there is variance in the data, so the mean of 7.7 might not be representative for all students. For example, a mean of 7.7 could occur when 50% of students get ~5.5 hours of sleep and 50% get ~9.5 hours. Stating that the average students gets 7.7 hours would not be accurate in this context, and more ways of describing data would be needed (like Z-scores or IQR). Also, having a standard deviation of 1.4 hours when the mean is 7.7 hours indicates that the data might be more spread apart. 
 
 ### Task 3: Calculate the standard error
 
@@ -58,7 +58,7 @@ sleep_stats
 
 **Answer this question:** The standard error is much smaller than the standard deviation. Why? What does each one measure?
 
-ANSWER HERE
+The standard error is smaller because it indicates that there would be a variance of around 1/4 of an hour in the sample mean if we kept taking different sets of 37 students. The standard deviation represents how many hours the data is from the mean in this specific sample. The standard error is smaller because it measures how the mean would specifically and not the variance of the entire dataset. The variance of this specific dataset is more likely to be higher than how much the mean changes. 
 
 ### Task 4: Calculate a 95% confidence interval
 
@@ -79,7 +79,7 @@ sleep_stats |>
 
 **Answer this question:** Write one sentence explaining what this confidence interval means in plain English that a reader would understand.
 
-ANSWER HERE
+If a sample was taken 20 times, the the true mean would fall between the lower and upper bounds 19 times. 
 
 ### Task 5: Visualize the distribution with the confidence interval
 
@@ -112,7 +112,7 @@ ggplot(sleep_data, aes(x = hours)) +
 
 **Answer this question:** Look at the chart. Notice that the confidence interval is much narrower than the spread of individual data points. Why? What's the difference between the variation in individual sleep hours and the uncertainty about the average?
 
-ANSWER HERE
+Individual sleep hours may vary, but that does not indicate that the mean will vary to the same extent. Variation in a dataset does not guarantee that the mean is inaccurate. Two data sets, one with a high sd and one with a low sd, could have the same mean.  
 
 ### Task 6: The CDC question — is 7 hours within the interval?
 
@@ -134,7 +134,7 @@ sleep_stats |>
   b) "Students May Not Be Getting Enough Sleep, Survey Suggests"
   c) "Survey: Students Getting Recommended Amount of Sleep"
 
-ANSWER HERE
+Headline A seems justified. Students are definitely getting enough sleep, which rules out headline b. Headline c is written in a blanket-statement format, which makes it not as justified. By citing the average, headline A indicates that this is the average across a group of students, and not the case for individual students.    
 
 ### Task 7: What about a bigger sample?
 
