@@ -180,7 +180,7 @@ With the information I have, I would consider a 25-second improvement in respons
 
 **Question 3:** Write a headline and a 2-3 sentence lede for a story about these findings. Your text should accurately reflect both the statistical significance and the effect size — don't let the police chief's framing drive the story if the data tells a more nuanced one.
 
-New Police Department Initiative Decreases Call Times
+New Police Department Initiative Decreases Call Times By 5%
 
 
 A recent $2 million initiative implemented by the City of Westbrook decreased emergency response times by 25 seconds. The average response time prior to this inititave was 8.2 minutes, which means the decrease to 7.7 minutes was only around 5%. 
