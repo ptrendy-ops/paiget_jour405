@@ -155,7 +155,7 @@ story_stats
 
 **Answer this question:** The 95% confidence interval tells us the range where the true average home price likely falls. Does that range include the old average of $285,000? What does that tell you?
 
-This range does not include the old overage of $285,000. This tells us that prices have increased significantly if the low confidence interval does not include the previous averagae. 
+This range does not include the old overage of $285,000. This tells us that there is no chance that the prices have not increased. This means they have increased.
 
 ### Task 6: Calculate the effect size (3 points)
 
@@ -185,7 +185,7 @@ tibble(
 
 **Answer this question:** The effect size is "medium." In dollar terms, the average increase is about $19,500. But remember that the standard deviation of home prices in this neighborhood was $32,000 *before* the transit line — meaning prices already varied by tens of thousands of dollars from sale to sale. Given that context, does a $19,500 increase seem large or modest? How does the effect size help you think about this differently than just looking at the dollar amount?
 
-ANSWER HERE
+The $19,500 increase, in context with the $32,500 standard deviation before the transit line, is significant but extremely large. The effect size helps us think more about what the dollar amount means. To the average person, $19,500 seems like a lot, but it might seem like less when it is framed as a 6.8% increase. The effect size of medium tells me that the result is somewhat meaningful, but there are still other factors to look into. 
 
 ### Task 7: What's the story? (6 points)
 
@@ -193,11 +193,11 @@ You now have all the statistical evidence. But writing the story requires more t
 
 **Part A:** The local officials are going to claim the transit line increased home values. Based on your analysis, is that claim supported? Write 2-3 sentences for the top of your story that accurately reflect both the statistical significance AND the effect size. Don't just echo the officials' talking points — interrogate them.
 
-ANSWER HERE
+Local officials in [town name] claim the new transit line has increased home values in the area. The average home price did increase by 6.8%, from $285,000 to $304,500, after the new transit line opened. Other housing pricing factors besides the transit line have not been evaluated, though.  
+
 
 **Part B:** A $19,500 increase is real and statistically significant, but what *else* could explain rising home prices in this neighborhood? List at least two alternative explanations that a good reporter would want to investigate before attributing the increase entirely to the transit line.
 
-ANSWER HERE
-
+I would want to investigate housing pricing factors such as mortgage rates that could be unrelated to the transit line. I would also want to investigate potential gentrification in the community. If there is evidence of gentrification and higher mortgage rates from before the transit line was opened, maybe the rising prices are just a continuation of those trends. The last thing I would want to know is the timeline of when the transit line was built, and the prices increased. An increase over 5 years would be much less meaningful than an increase over 5 months. 
 
 When you are finished, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
