@@ -1,6 +1,6 @@
 ---
 title: "HW10: Significance Testing & Effect Size"
-name: REPLACE WITH YOUR NAME
+name: Paige Trendell
 ---
 
 You previously calculated the mean, margin of error and confidence interval for monthly car thefts in Prince George's County. Your editor now wants to know: it _looks_ like car thefts are decreasing lately, but is that change real, and how big is it? In this assignment, you'll use significance testing and effect size to answer those questions. Load the tidyverse and the data to get started.
@@ -138,7 +138,7 @@ You now have three pieces of evidence: the confidence intervals from last week, 
 
 1. In Part 1, your editor asked "just tell me if car thefts are going up or down". Now you have significance testing. Write 2-3 sentences telling your editor the answer, using all three pieces of evidence (CI, p-value, and effect size).
 
-Car thefts are going down. The second half time period has a lower mean, and the confidence intervals of each time period do not overlap. Additionally, the p-value is less than 0.05, which means that we can reject the null hypothesis that no change occurred. This means that change did occur. By observing the data, we can determine that the second half has a lower average. The effect size being large shows us that this difference is significant.   
+Car thefts are going down. The second half time period has a lower mean, and the confidence intervals of each time period do not overlap. Additionally, the p-value is less than 0.05, which means that we can reject the null hypothesis that no change occurred. This means that change did occur. By observing the data, we can determine that the second half has a lower average. The effect size being large shows us that this difference is meaningful.   
 
 2. Write a headline and a 2-3 sentence lede for a story about car thefts in Prince George's County. Unlike the response times story from class (where the effect was small and the headline needed to be cautious), this is a case where the data strongly supports a clear conclusion. Your writing should reflect that — but still note the limitations (correlation vs. causation, what else might explain the decline).
 
