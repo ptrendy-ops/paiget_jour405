@@ -125,7 +125,7 @@ viz_data <- bind_rows(
   weighted_by_education |>
     filter(Q21 == 1) |>
     mutate(Type = "Weighted",
-           percentage = REPLACE ME) |>
+           percentage = REPLACE_ME) |>
     select(Type, educ, percentage)
 )
 
