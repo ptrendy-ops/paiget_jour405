@@ -93,10 +93,13 @@ ggplot(nonvoters_data, aes(x = weight)) +
 **Questions:**
 
 1. What is the range of weights in this dataset?
+The weights range from 0.23-3.04, 
 
 2. What does it mean when a respondent has a weight of 0.23? What about 3.04?
+If a respondent has a weight of 0.23, their group is overrepresented. They count as less than one person in the poll. A respondent with a weight of 3.04 is an an underrepresented group and their vote counts for three people. 
 
 3. Why might some respondents be weighted more heavily than others?
+Those who are in groups that have lower response rates are weighted more heavily than others. Their response counts for more than one person to make sure their group is represented equally to other groups. 
 
 # Exercise 1: Voter Categories and Weighting
 
@@ -232,7 +235,10 @@ kable(comparison, digits = 1, caption = "Difference Between Weighted and Unweigh
 **Answer These Questions:**
 
 1. Which voter category shows the biggest difference between weighted and unweighted results?
+The rarely/never voted category shows the biggest difference between weighted and unweighted result. Their weighted result is 3.6 percentage points less than the unweighted results. This may seem small but is significant for elections. 
 
 2. How might these differences affect reporting on likely voter turnout?
+These differences show that there can be overrepresentation and underrepresentation of some groups. In this case the rarely/never category was overrepresented so journalists may have reported them as more likely to vote than they actually were. 
 
 3. Why do you think these differences exist? What does this tell us about who might be over or under-represented in the sample?
+These differences exist because some people might be less likely to take surveys -- like those with less free time. Someone with a demanding work schedule might be less likely to consistently vote and less likely to respond to surveys due to time constraints. These differences can also be caused by survey methods. For example, older Americans are more likely to answer the phone than younger Americans, if that is how the survey is conducted. 
