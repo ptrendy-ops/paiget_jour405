@@ -58,7 +58,7 @@ nonvoters_data |>
 
 **Question 2:** College graduates are overrepresented in most surveys. Does that appear to be true here? Why might college graduates be more likely to respond to a survey than people with less education?
 
-Yes, college graduates are overrepresented in this survey. They might be more likely to respond to a survey because most people take statistics classes in college and are aware of the importance of surveys and polls. 
+Yes, college graduates are overrepresented in this survey. They might be more likely to respond to a survey because most people take statistics classes in college and are aware of the importance of surveys and polls. Additionally, college graduates often have "white collor" jobs with more consistent hours that would give them more free time to answer surveys. 
 
 ## Task 3: Unweighted Voting Intentions by Education (4 points)
 
@@ -87,7 +87,7 @@ unweighted_summary
 
 **Question 3:** Based only on these unweighted numbers, write a one-sentence headline for a story about education and voting intentions.
 
-College Graduates More Likely To Vote Than High School Graduates
+College Graduates More Likely To Vote Than High School Graduates by 20 Percentage Points
 
 ## Task 4: Weighted Voting Intentions by Education (2 points)
 
@@ -125,7 +125,7 @@ viz_data <- bind_rows(
   weighted_by_education |>
     filter(Q21 == 1) |>
     mutate(Type = "Weighted",
-           percentage = REPLACE_ME) |>
+           percentage = weighted_count / weighted_total * 100) |>
     select(Type, educ, percentage)
 )
 
@@ -145,7 +145,7 @@ ggplot(viz_data, aes(x = educ, y = percentage, fill = Type)) +
 
 **Question 4:** Which education group shows the biggest shift between weighted and unweighted results? In percentage points, how large is that shift? Does weighting change the story, or does it just change the exact numbers?
 
-ANSWER HERE
+High school education or less has the biggest shift between weighted and unweighted results. THe weighted results are 2.7 percentage points less than the unweighted results. This does not change the story much, just the exact numbers. 
 
 ## Task 6: The UMD Belonging Survey (8 points)
 
@@ -153,4 +153,6 @@ Earlier in class this week, we looked at the 2024 UMD Belonging and Community Su
 
 **Question 5:** Based on what you've learned in this assignment, write 2-3 paragraphs as if you were a reporter evaluating the UMD survey before writing a story based on it. Address: (1) what the lack of weighting means for how you'd use the results, (2) which groups in the UMD survey appeared most underrepresented based on Figures 1 and 2, and (3) what question you would ask the survey's authors before publishing.
 
-ANSWER HERE
+I would be very cautious as a reporter before writing a story based on the UMD survey. I am less confident that the results accurately represent all UMD students considering the overrepresentation of women, underrepresentation of men, underrepresentation of Hispanic/Latinx students, and the grouping of gender non-conforming students into one category. I would be less likely to report on the results of the "Gender Expansive" group because it represents many identities. Not weighting these groups so their voices have the same "volume" can create inaccuracies in the survey. List seven describes Hispanic/Latnix and Asian students as less likely to seriously consider leaving the university compared to Black students. Since Hispanic students were underrepresented in the survey, I don't think I would report on this statistic. The result might be different had they been accurately weighted. 
+
+I also have concerns with grouping undergraduate students, graduate students, and faculty/staff into one category. This makes me less likely to report on results shared across students and staff. I would ask the survey's authors why they decided to do this, and if why thought this would be a better representation than individual surveys for each group. For example, students and staff might have very different ideas about belonging on campus. Before publishing, I would also want to ask if this survey has been done before. If so, when was the survey conducted, and how do the responses compare to this survey's? 
