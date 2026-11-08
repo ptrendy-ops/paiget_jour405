@@ -1,0 +1,39 @@
+---
+title: "final_project"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+happiness_ranking <- read_csv("WHR26_Data_Figure_2.1.csv")
+```
+```{r}
+social_spending <- read_csv("social_spending.csv")
+```
+
+
+Notes:
+- Converted the .excel files to .csv. The files were not loading, so I did some googling and found that excel files are not compatible with read_csv. 
+- 2021 is the most recent year that has consistent data from the social_spending file. happiness_ranking also has data for countries in 2021. This will be the year I start with. 
+
+happiness_ranking description: 
+- Has data for 146 countries in 2021. 
+- Formatted as columns in the order of year, rank, country name. There are other columns with information that will probably not be relevant to my project. 
+
+social_spending description:
+- Has data for 83 countries in 2021. 
+- Formatted as columns in the order of country name and years from 2010-2024. Data from 2024 is incomplete, which is why I won't use it. 
+- The formatting is a bit weird. What should be the titles of the columns (country name and years) are actually on the fourth row. 
+
+Need to do:
+- Figure out which countries are in both datasets
+- Format the datasets to be "cleaner" and only include the data that will be useful for my project. Ex: For happiness_ranking, create another dataset that only has data from 2021. 
+- Potentially reformat the social_spending dataset. I think the weird formatting could cause problems when I try to make visualizations. 
+
+Questions:
+- Should I try to change social_spending to compile all of the years in one column titled "year," like how happiness_ranking is formatted?
+- How do I go about fixing the social_spending file so that what should be the header information is not on the fourth row? 
+
