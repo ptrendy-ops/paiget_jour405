@@ -52,7 +52,7 @@ pg_murders_heat |>
 
 ### Task 6: Describe the results of both the correlation calculation and the scatterplot.
 
-The correlation calculation of 0.6 is closer to one than zero, which shows there is a correlation between rising temperatures and homicides. The scatterplot also shows that months with warmer weather have higher counts of murder. The line of best fit increases from about 30-40 murders as the monthly temperature increases from 30 to 70 degrees. The colder months of January, February, April, and November all have murder counts less than 32. The warmer months of May, June, and July have murder counts higher than 40. The scatterplot and line of best fit help to provide a visual explanation of the correlation. 
+The correlation calculation of 0.6 is closer to one than zero, which shows there is a correlation between rising temperatures and homicides. The scatterplot also shows that months with warmer weather have higher counts of murder. The line of best fit increases from about 30-40 murders as the monthly temperature increases from 30 to 70 degrees. The colder months of February, April, and November all have murder counts less than 30. The warmer months of May, June, and July have murder counts higher than 40. There are a few months that don't exactly follow this pattern. For example, January and August have around the same number of murders, even though January is usually pretty cold and August is pretty warm. The scatterplot and line of best fit help to provide a visual explanation of the correlation. We can see that there is a relationship, but it is not perfect. 
 
 
 
