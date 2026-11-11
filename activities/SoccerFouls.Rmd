@@ -49,7 +49,7 @@ matches25 |>
 
 ### Task 6: Describe the results of both the correlation calculation and the scatterplot.
 
-The correlatoin calculation shows that there is very little correlation between fouls and goals. The correlation value is 0.01, and the closer this value is to zero, the less correlation it has. The scatterplot also shows basically no correlation. The circular blob shape shows that there is almost no relationship. The almost flat line of best fit also shows how small of a correlation there is. These calculations both both represent correlation. The scatterplot helps provide a visual representation of correlation and the correlatin calculation represents how close the correlation is to 1:1 or -1:1. 
+The correlatoin calculation shows that there is very little correlation between fouls and game outcomes. The correlation value is 0.01, and the closer this value is to zero, the less correlation it has. The scatterplot also shows basically no correlation between number of fouls and winning or losing the game. The circular blob shape shows that there is almost no relationship. The almost flat line of best fit also shows how small of a correlation there is. These calculations both both represent correlation. The scatterplot helps provide a visual representation of correlation and the correlatin calculation represents how close the correlation is to 1:1 or -1:1. 
 
 
 When you are done, save your work, switch to GitHub Desktop, then add, commit and push your changes to GitHub and submit the URL of the notebook in ELMS.
