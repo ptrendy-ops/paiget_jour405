@@ -13,7 +13,8 @@ The Tests I Could Run:
 
 - Right now, I am looking at public social spending because it accounts for the vast majority of social spending for most countries. I am not exactly sure what this would look like, but I think it would be interesting to compare different countries' ratios of public to private spending. This could be in the form of a bar chart. 
 
-- Doing some form of regression model to determine that wealth isn't the sole cause of happiness. 
+- Doing some form of regression model to determine that wealth isn't the sole cause of happiness. This might involve evaluating other factors about the countries that are publicly available, like average age of the citizens, type of government, or age of the country. 
+
 
 Other note: In case you didn't scroll down, I did my best to clean up the files and merge them. Even though I deleted some columns of the happiness_ranking dataset, they are still showing up as N/A in the combined data sheet after I tried various techniques to clear these cells in excel. 
 
