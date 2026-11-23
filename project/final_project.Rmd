@@ -45,6 +45,53 @@ combined_data <- happiness_ranking |> inner_join(social_spending, join_by(`Count
 #combined_data <- happiness_ranking |> inner_join(social_spending, join_by(`Year` == `Year`))
 ```
 
+
+
+11/24 assignment tests:
+
+```{r}
+social_spending |> summarize (
+mean_social_spending = mean(`Social Spending as Percentage of GDP`),
+median_social_spending = median(`Social Spending as Percentage of GDP`),
+sd_social_spending = sd(`Social Spending as Percentage of GDP`)
+)
+```
+
+```{r}
+social_spending |> 
+  ggplot() + 
+  geom_histogram(aes(x = `Social Spending as Percentage of GDP`), binwidth = 2)+
+  geom_vline(aes(xintercept = mean(`Social Spending as Percentage of GDP`)), color = "red", linetype = "dashed", size = 1)+
+  geom_vline(aes(xintercept = mean(`Social Spending as Percentage of GDP`) - sd(`Social Spending as Percentage of GDP`)), color = "blue", linetype = "dashed", size = 1) +
+  geom_vline(aes(xintercept = mean(`Social Spending as Percentage of GDP`) + sd(`Social Spending as Percentage of GDP`)), color = "blue", linetype = "dashed", size = 1)
+  
+```
+
+
+```{r}
+combined_data |>
+  ggplot(aes(x = `Social Spending as Percentage of GDP`, y = `Life evaluation (3-year average)`)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE, color = "red") +
+  labs(x = "Social Spending as Percentage of GDP", y = "Happiness Score",
+       title = "Countries' Happiness Score vs. Social Spending")
+```
+```{r}
+model <- lm(`Life evaluation (3-year average)` ~ `Social Spending as Percentage of GDP`, data = combined_data)
+summary(model)
+
+happiness_model <- model
+```
+P-value: 0.006. This is statistically significant
+Adjusted R-Squared: 15.27%. This means that the social spending percentage causes a 15.27% variation in a country's happiness score. This seems like there is an impact but it is not very significant. 
+Coefficient: 0.04. This is positive which indicates that higher social spending leads to higher happiness scores. 0.04 is a very small coefficient, so the magnitude of this relationship is somewhat minimal. 
+  
+  
+Notes from 11/24:
+- The mean and median are very close, which means that the data should not be extremely skewed and is somewhat symmetrical. 
+- I am choosing to use happiness score over happiness rank because I think that will work best with my project. I also think I might get confused with the "highest rank" being the lowest value number. 
+
+
 Notes from 11/16:
 - I reformatted both datasets to include the same countries and data from 2021. I have the original sheets, so I'll be able to add data for more years if I get to that. 
 - I tried to clean up both charts so they would only include the columns with necessary information. There are a bunch of NA columns at the end of happiness_ranking that I need to figure out how to delete. 
