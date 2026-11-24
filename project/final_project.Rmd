@@ -56,16 +56,19 @@ median_social_spending = median(`Social Spending as Percentage of GDP`),
 sd_social_spending = sd(`Social Spending as Percentage of GDP`)
 )
 ```
+The mean and median are very close, which means that the data should not be extremely skewed and is somewhat symmetrical. 
 
 ```{r}
 social_spending |> 
   ggplot() + 
-  geom_histogram(aes(x = `Social Spending as Percentage of GDP`), binwidth = 2)+
+  geom_histogram(aes(x = `Social Spending as Percentage of GDP`), binwidth = 2.5)+
   geom_vline(aes(xintercept = mean(`Social Spending as Percentage of GDP`)), color = "red", linetype = "dashed", size = 1)+
   geom_vline(aes(xintercept = mean(`Social Spending as Percentage of GDP`) - sd(`Social Spending as Percentage of GDP`)), color = "blue", linetype = "dashed", size = 1) +
   geom_vline(aes(xintercept = mean(`Social Spending as Percentage of GDP`) + sd(`Social Spending as Percentage of GDP`)), color = "blue", linetype = "dashed", size = 1)
   
 ```
+This histogram shows that the data is pretty normally distributed. It is not perfect, but it generally follows a bell curve, and most of the data falls within 1 standard deviation of the mean. 
+
 
 
 ```{r}
@@ -88,8 +91,12 @@ Coefficient: 0.04. This is positive which indicates that higher social spending 
   
   
 Notes from 11/24:
-- The mean and median are very close, which means that the data should not be extremely skewed and is somewhat symmetrical. 
 - I am choosing to use happiness score over happiness rank because I think that will work best with my project. I also think I might get confused with the "highest rank" being the lowest value number. 
+- Is there any way to rename the column titles without going back to the imported files and renaming them? I'm realizing these column names are a bit tedious to type. 
+- I'd like to do some sort of regression with GDP per person next.  
+Would this be a multiple regression test using social spending, happiness score, and the GDP per person, and how would I do that? This was one of the columns in the original World Happiness Ranking file, so I would need to make a new dataset that includes this column.
+- Next up, I want to do a public/private spending comparison. I like the suggested idea of evaluating public spending as a percentage of total social spending. Depending on my results, it might be interesting to create a scatterplot or do regression testing of countries' happiness scores compared to their public spending percentage. 
+
 
 
 Notes from 11/16:
