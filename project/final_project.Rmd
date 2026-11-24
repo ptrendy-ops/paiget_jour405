@@ -3,22 +3,6 @@ title: "final_project"
 output: html_document
 ---
 
-The Tests I Could Run:
-
-- One important test to run would be a scatterplot that examines the correlation between social spending and happiness rank. I would also like to calculate a correlation coefficient. This would be something to do at the start of my analysis so I can see what kind of correlation there is. If there is not much of a correlation, I will work on figuring out different factors. If there is a correlation, I can work on understanding why.  
-
-- I would like to do a histogram to show how many countries have certain ranges of social spending in GDP percentage. I can evaluate if the distribution is normal and what that says about this dataset. 
-
-- Calculate the mean, median, and standard deviation of social spending percentages. 
-
-- Right now, I am looking at public social spending because it accounts for the vast majority of social spending for most countries. I am not exactly sure what this would look like, but I think it would be interesting to compare different countries' ratios of public to private spending. This could be in the form of a bar chart. 
-
-- Doing some form of regression model to determine that wealth isn't the sole cause of happiness. This might involve evaluating other factors about the countries that are publicly available, like average age of the citizens, type of government, or age of the country. 
-
-
-Other note: In case you didn't scroll down, I did my best to clean up the files and merge them. Even though I deleted some columns of the happiness_ranking dataset, they are still showing up as N/A in the combined data sheet after I tried various techniques to clear these cells in excel. 
-
-
 
 ```{r}
 library(tidyverse)
@@ -99,6 +83,21 @@ Would this be a multiple regression test using social spending, happiness score,
 - I was able to use code from other assignments as a template for these tests, so I did not run into many errors. 
 
 
+
+The Tests I Could Run:
+
+- One important test to run would be a scatterplot that examines the correlation between social spending and happiness rank. I would also like to calculate a correlation coefficient. This would be something to do at the start of my analysis so I can see what kind of correlation there is. If there is not much of a correlation, I will work on figuring out different factors. If there is a correlation, I can work on understanding why.  
+
+- I would like to do a histogram to show how many countries have certain ranges of social spending in GDP percentage. I can evaluate if the distribution is normal and what that says about this dataset. 
+
+- Calculate the mean, median, and standard deviation of social spending percentages. 
+
+- Right now, I am looking at public social spending because it accounts for the vast majority of social spending for most countries. I am not exactly sure what this would look like, but I think it would be interesting to compare different countries' ratios of public to private spending. This could be in the form of a bar chart. 
+
+- Doing some form of regression model to determine that wealth isn't the sole cause of happiness. This might involve evaluating other factors about the countries that are publicly available, like average age of the citizens, type of government, or age of the country. 
+
+
+Other note: In case you didn't scroll down, I did my best to clean up the files and merge them. Even though I deleted some columns of the happiness_ranking dataset, they are still showing up as N/A in the combined data sheet after I tried various techniques to clear these cells in excel. 
 
 Notes from 11/16:
 - I reformatted both datasets to include the same countries and data from 2021. I have the original sheets, so I'll be able to add data for more years if I get to that. 
