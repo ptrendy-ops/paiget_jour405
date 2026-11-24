@@ -96,6 +96,7 @@ Notes from 11/24:
 - I'd like to do some sort of regression with GDP per person next.  
 Would this be a multiple regression test using social spending, happiness score, and the GDP per person, and how would I do that? This was one of the columns in the original World Happiness Ranking file, so I would need to make a new dataset that includes this column.
 - Next up, I want to do a public/private spending comparison. I like the suggested idea of evaluating public spending as a percentage of total social spending. Depending on my results, it might be interesting to create a scatterplot or do regression testing of countries' happiness scores compared to their public spending percentage. 
+- I was able to use code from other assignments as a template for these tests, so I did not run into many errors. 
 
 
 
